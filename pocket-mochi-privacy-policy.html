@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Pocket Mochi</title>
+  <style>
+    :root {
+      --bg: #f7f3ea;
+      --bg-soft: #fffaf1;
+      --card: #ffffff;
+      --card-green: #eef8ee;
+      --text: #2f3a32;
+      --muted: #647066;
+      --heading: #24472c;
+      --accent: #8fcf9b;
+      --accent-dark: #4f9a61;
+      --accent-yellow: #f4d889;
+      --accent-pink: #f7c9d4;
+      --border: #dfeadb;
+      --shadow: 0 14px 35px rgba(70, 102, 74, 0.12);
+      --radius: 22px;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(143, 207, 155, 0.28), transparent 34%),
+        radial-gradient(circle at top right, rgba(247, 201, 212, 0.26), transparent 30%),
+        linear-gradient(180deg, #fbf6ec 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+
+    header {
+      margin: 24px 0 28px;
+      padding: 42px 26px;
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(238, 248, 238, 0.96), rgba(255, 250, 241, 0.96)),
+        var(--card-green);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(223, 234, 219, 0.9);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before,
+    header::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 999px;
+      background: rgba(244, 216, 137, 0.28);
+      z-index: 0;
+    }
+
+    header::before {
+      top: -56px;
+      left: -42px;
+    }
+
+    header::after {
+      right: -58px;
+      bottom: -64px;
+      background: rgba(143, 207, 155, 0.25);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.92rem;
+      border: 1px solid var(--border);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--heading);
+      font-size: clamp(2rem, 7vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.16rem);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--border);
+    }
+
+    main {
+      display: grid;
+      gap: 18px;
+    }
+
+    section {
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 22px rgba(70, 102, 74, 0.06);
+    }
+
+    section.highlight {
+      background:
+        linear-gradient(135deg, rgba(238, 248, 238, 0.98), rgba(255, 255, 255, 0.98));
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      color: var(--heading);
+      font-size: clamp(1.28rem, 3vw, 1.75rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      color: var(--heading);
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin: 8px 0;
+      padding-left: 4px;
+    }
+
+    strong {
+      color: var(--heading);
+    }
+
+    a {
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    .notice {
+      padding: 18px;
+      border-radius: 18px;
+      background: #fff8dc;
+      border: 1px solid rgba(244, 216, 137, 0.9);
+      color: #59491f;
+    }
+
+    .cozy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+    }
+
+    .mini-card span {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      margin: 28px 0 12px;
+      padding: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    footer strong {
+      color: var(--heading);
+    }
+
+    .footer-card {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, var(--max-width));
+        padding: 18px 0;
+      }
+
+      header {
+        margin-top: 10px;
+        padding: 34px 18px;
+        border-radius: 26px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .cozy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .meta {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .pill {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="hero-content">
+        <div class="badge">🐸 Privacy Policy</div>
+        <h1>Pocket Mochi</h1>
+        <p class="subtitle">
+          A gentle privacy policy for a cozy personal spending tracker with a virtual frog pet.
+        </p>
+        <div class="meta" aria-label="Policy details">
+          <span class="pill">Developer: JamieDevs</span>
+          <span class="pill">Last updated: 17/06/2026</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="highlight" aria-labelledby="overview">
+        <h2 id="overview">🌿 Overview</h2>
+        <p>
+          Pocket Mochi is a cozy personal spending tracker designed to help users organise everyday spending, budgets, quests, XP, streaks, pet outfits, rooms, and app preferences.
+        </p>
+        <p>
+          This Privacy Policy explains what information the app stores, how that information is used, and the choices users have. Pocket Mochi is built to be supportive, simple, and respectful of user privacy.
+        </p>
+      </section>
+
+      <section aria-labelledby="information-stored">
+        <h2 id="information-stored">🪷 Information Stored by the App</h2>
+        <p>
+          Pocket Mochi stores app information locally on the user's device so the app can remember progress and personal settings.
+        </p>
+        <p>This may include:</p>
+        <ul>
+          <li>Expense logs and spending entries</li>
+          <li>Notes added to spending entries</li>
+          <li>Budget settings and spending categories</li>
+          <li>Quest progress, XP, streaks, and other app progress</li>
+          <li>Display name, if the user chooses to set one</li>
+          <li>Selected pet outfit, selected room, and cosmetic preferences</li>
+          <li>App preferences and settings</li>
+        </ul>
+        <p>
+          Pocket Mochi does <strong>not</strong> require users to create an account.
+        </p>
+      </section>
+
+      <section aria-labelledby="local-storage">
+        <h2 id="local-storage">🏡 Local Device Storage</h2>
+        <p>
+          Pocket Mochi is designed to store expense logs, notes, budget settings, progress, display name, selected outfit or room, and preferences locally on the user's device.
+        </p>
+        <p>
+          This means the information is primarily kept on the device where the app is installed, unless a platform feature, backup service, purchase system, crash reporting service, or other optional service is added or enabled later.
+        </p>
+      </section>
+
+      <section aria-labelledby="how-used">
+        <h2 id="how-used">🍃 How Information Is Used</h2>
+        <p>
+          Information stored in Pocket Mochi is used to provide the app's core features, including spending tracking, budgeting, quest progress, XP, streaks, pet customisation, room customisation, and saved preferences.
+        </p>
+        <div class="cozy-grid" aria-label="Privacy commitments">
+          <div class="mini-card">
+            <span aria-hidden="true">🪙</span>
+            <strong>No data selling</strong>
+            <p>Pocket Mochi does not sell personal data.</p>
+          </div>
+          <div class="mini-card">
+            <span aria-hidden="true">📝</span>
+            <strong>No ad use</strong>
+            <p>Spending logs and notes are not used for advertising.</p>
+          </div>
+          <div class="mini-card">
+            <span aria-hidden="true">🐸</span>
+            <strong>No account required</strong>
+            <p>The app does not require account registration.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="purchases">
+        <h2 id="purchases">💛 Optional Supporter Purchases</h2>
+        <p>
+          Pocket Mochi may offer optional supporter purchases if this feature is enabled.
+        </p>
+        <p>
+          Optional supporter purchases are handled through Google Play Billing. JamieDevs does <strong>not</strong> receive or store payment card details. Payment processing, receipts, refunds, and purchase management are handled by Google Play according to Google's own policies and systems.
+        </p>
+      </section>
+
+      <section aria-labelledby="third-party-services">
+        <h2 id="third-party-services">☁️ Google Play and Platform Services</h2>
+        <p>
+          Pocket Mochi may use Google Play services for app distribution, optional purchases, crash reporting, or basic platform services if those features are added later.
+        </p>
+        <p>
+          These services may process limited technical information, such as device information, purchase status, crash logs, diagnostics, or app performance information, according to the relevant Google Play and Google service terms and privacy policies.
+        </p>
+      </section>
+
+      <section aria-labelledby="advertising">
+        <h2 id="advertising">🌸 Advertising</h2>
+        <p>
+          Pocket Mochi does not use spending logs or notes for advertising. JamieDevs does not sell personal data.
+        </p>
+        <p>
+          If advertising features are ever added in the future, this Privacy Policy should be updated before those features are released.
+        </p>
+      </section>
+
+      <section aria-labelledby="data-control">
+        <h2 id="data-control">🧺 Deleting or Resetting App Data</h2>
+        <p>
+          Users can delete or reset their app data from within Pocket Mochi if this feature exists in the installed version of the app.
+        </p>
+        <p>
+          Users can also delete local app data by uninstalling Pocket Mochi or by clearing the app's storage through Android system settings.
+        </p>
+        <p>
+          Clearing app storage or uninstalling the app may permanently remove locally stored expense logs, notes, budgets, progress, outfits, rooms, streaks, and preferences from that device.
+        </p>
+      </section>
+
+      <section aria-labelledby="financial-disclaimer">
+        <h2 id="financial-disclaimer">🪙 Financial Disclaimer</h2>
+        <div class="notice">
+          <p>
+            Pocket Mochi is not a bank, financial adviser, lender, investment service, credit provider, or financial institution.
+          </p>
+        </div>
+        <p>
+          The app provides budgeting and spending tracking tools for personal organisation only. It does not provide financial, legal, tax, investment, credit, lending, or banking advice.
+        </p>
+        <p>
+          Users are responsible for their own financial decisions and should seek advice from a qualified professional where appropriate.
+        </p>
+      </section>
+
+      <section aria-labelledby="children">
+        <h2 id="children">🐣 Children's Privacy</h2>
+        <p>
+          Pocket Mochi is not designed for children under 13.
+        </p>
+        <p>
+          JamieDevs does not knowingly collect personal information from children under 13. If a parent or guardian believes that a child has provided personal information through the app, they should contact JamieDevs so the issue can be reviewed.
+        </p>
+      </section>
+
+      <section aria-labelledby="security">
+        <h2 id="security">🔐 Security</h2>
+        <p>
+          JamieDevs aims to keep Pocket Mochi simple and privacy-respecting. Because app data is stored locally on the user's device, users should protect their device with appropriate security measures, such as a passcode, biometric lock, and regular device updates.
+        </p>
+        <p>
+          No method of storage or transmission is completely secure, but Pocket Mochi is designed to avoid unnecessary collection of personal information.
+        </p>
+      </section>
+
+      <section aria-labelledby="changes">
+        <h2 id="changes">🍂 Changes to This Policy</h2>
+        <p>
+          JamieDevs may update this Privacy Policy from time to time, especially if new features, platform services, purchases, crash reporting, backup options, or other privacy-relevant changes are added.
+        </p>
+        <p>
+          When this policy is updated, the "Last updated" date should be changed to reflect the latest version.
+        </p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">📬 Contact</h2>
+        <p>
+          For questions about this Privacy Policy or Pocket Mochi's privacy practices, users can contact JamieDevs at:
+        </p>
+        <p>
+          <strong>jamiedevs21@gmail.com</strong>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-card">
+        <strong>JamieDevs</strong> · Pocket Mochi Privacy Policy · Last updated: 17/06/2026
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
